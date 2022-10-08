@@ -28,14 +28,8 @@ const Games = (props) => {
     return (
         <div>
             <p>Games</p> 
-            <Fab 
-            sx={fabStyle}
-            color="primary"
-            aria-label='add'
-            onClick={() => alert('Clicked')}
-            >
-                <AddIcon />
-            </Fab>
+            
+
 
         </div>
 

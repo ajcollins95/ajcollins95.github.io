@@ -3,9 +3,9 @@ import Box from '@mui/material/Box';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import Paper from '@mui/material/Paper';
-import ScoreboardIcon from '@mui/icons-material/Scoreboard';
-import AnalyticsIcon from '@mui/icons-material/Analytics';
-import SettingsIcon from '@mui/icons-material/Settings';
+import HomeIcon from '@mui/icons-material/Home';
+import CodeIcon from '@mui/icons-material/Code';
+import WorkIcon from '@mui/icons-material/Work';
 import Divider from '@mui/material/Divider';
 import Games from './Games';
 import Settings from './Settings';
@@ -59,9 +59,9 @@ const HomeScreen = (props) => {
                             setValue(newValue);
                         }}
                         >
-                        <BottomNavigationAction label="Games" icon={<ScoreboardIcon />} />
-                        <BottomNavigationAction label="Analytics" icon={<AnalyticsIcon />} />
-                        <BottomNavigationAction label="Settings" icon={<SettingsIcon />} />
+                        <BottomNavigationAction label="Home" icon={<HomeIcon />} />
+                        <BottomNavigationAction label="Projects" icon={<CodeIcon />} />
+                        <BottomNavigationAction label="Experience" icon={<WorkIcon />} />
                     </BottomNavigation>
                 </Paper>
             </Box>

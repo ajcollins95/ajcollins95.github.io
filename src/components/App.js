@@ -19,7 +19,9 @@ const App = (props) => {
     })
 
     const handleScreenChange = (screen) => {
+        //make a state clone
         let appDataClone = _.cloneDeep(appData)
+        
         appDataClone.currentScreen = screen
         setAppData(appDataClone)
     }

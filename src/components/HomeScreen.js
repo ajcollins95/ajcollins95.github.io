@@ -6,32 +6,44 @@ import Paper from '@mui/material/Paper';
 import ScoreboardIcon from '@mui/icons-material/Scoreboard';
 import AnalyticsIcon from '@mui/icons-material/Analytics';
 import SettingsIcon from '@mui/icons-material/Settings';
-import Divider from '@mui/material/Divider'
+import Divider from '@mui/material/Divider';
+import Games from './Games';
+import Settings from './Settings';
+import Analytics from './Analytics';
+
 //import Cell from './Cell';
 //import AppHeader from './AppHeader';
 //import '../styles/App.css';
 
-const Screen = (props) => {
+const HomeScreen = (props) => {  
+    
+    let bottom_nav_screens = [
+        <Games />,
+        <Analytics />,
+        <Settings />,
+    ]
 
     const initScreenData = () => {
-        let screen_types = [
-            /*
-            <History />,
-            <NewGame />,
-            <GameRunning />,
-            */
+        let bottom_nav_screens = [
+            <Games />,
+            <Analytics />,
+            <Settings />,
         ]
 
         let screen_data = {
+            nav_screen: bottom_nav_screens[0]
         }
         return screen_data
     }
+
     const [screenData, setScreenData] = useState(initScreenData())    
     const [value, setValue] = useState(0)    
 
     return (
+
         <div className="screen">
             <Box>
+                {bottom_nav_screens[value]}
                 <Paper 
                     sx = {{
                         position: 'fixed',
@@ -39,11 +51,9 @@ const Screen = (props) => {
                         width: '100%'
                     }}
                     elevation = {3}
-
                 >
                     <BottomNavigation
                         showLabels
-                     
                         value={value}
                         onChange={(event, newValue) => {
                             setValue(newValue);
@@ -60,4 +70,4 @@ const Screen = (props) => {
     )
 }
 
-export default Screen;
+export default HomeScreen;

@@ -7,9 +7,9 @@ import HomeIcon from '@mui/icons-material/Home';
 import CodeIcon from '@mui/icons-material/Code';
 import WorkIcon from '@mui/icons-material/Work';
 import Divider from '@mui/material/Divider';
-import Games from './Games';
-import Settings from './Settings';
-import Analytics from './Analytics';
+import Games from './Screens/Games';
+import Settings from './Screens/Settings';
+import Analytics from './Screens/Analytics';
 
 //import Cell from './Cell';
 //import AppHeader from './AppHeader';

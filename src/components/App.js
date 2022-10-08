@@ -2,8 +2,8 @@ import { color, ThemeProvider } from '@mui/system';
 import React, { useState, useEffect } from 'react';
 import { createTheme, ThemProvider, styled } from '@mui/material/styles';
 
-import HomeScreen from './HomeScreen'
-import GameScreen from './GameScreen'
+import HomeScreen from './HomeScreen';
+
 const _ = require('lodash')
 
 const App = (props) => {
@@ -21,7 +21,7 @@ const App = (props) => {
     const handleScreenChange = (screen) => {
         //make a state clone
         let appDataClone = _.cloneDeep(appData)
-        
+
         appDataClone.currentScreen = screen
         setAppData(appDataClone)
     }
@@ -37,15 +37,10 @@ const App = (props) => {
     }
     const [appData, setAppData] = useState(initAppData())   
     
-    const appScreens = {
-        home: <HomeScreen appData={appData}/>,
-        game: <GameScreen appData={appData}/>
-    }
-    console.log(appScreens[appData.currentScreen])
 
     return (
         <ThemeProvider theme={theme}>
-            {appScreens[appData.currentScreen]}
+            <HomeScreen appData={appData}/>
         </ThemeProvider>
 
     )

@@ -4,9 +4,9 @@ import { createTheme, ThemProvider, styled } from '@mui/material/styles';
 //import Cell from './Cell';
 //import AppHeader from './AppHeader';
 //import '../styles/Analytics.css';
-import Screen from './HomeScreen'
+import Screen from '../HomeScreen'
 
-const Settings = (props) => {
+const Analytics = (props) => {
 
     const initAppData = () => {
         let number_of_screens = 4
@@ -19,10 +19,10 @@ const Settings = (props) => {
 
     return (
         <div>
-            <p>Settings</p>
+            <p>Analytics</p>
         </div>
 
     )
 }
 
-export default Settings;
+export default Analytics;

@@ -7,9 +7,9 @@ import HomeIcon from '@mui/icons-material/Home';
 import CodeIcon from '@mui/icons-material/Code';
 import WorkIcon from '@mui/icons-material/Work';
 import Divider from '@mui/material/Divider';
-import Games from './Screens/Games';
-import Settings from './Screens/Settings';
-import Analytics from './Screens/Analytics';
+import Home from './Screens/Home';
+import Experience from './Screens/Experience';
+import Projects from './Screens/Projects';
 
 //import Cell from './Cell';
 //import AppHeader from './AppHeader';
@@ -18,16 +18,16 @@ import Analytics from './Screens/Analytics';
 const HomeScreen = (props) => {  
     
     let bottom_nav_screens = [
-        <Games />,
-        <Analytics />,
-        <Settings />,
+        <Home />,
+        <Projects />,
+        <Experience />,
     ]
 
     const initScreenData = () => {
         let bottom_nav_screens = [
-            <Games />,
-            <Analytics />,
-            <Settings />,
+            <Home />,
+            <Projects />,
+            <Experience />,
         ]
 
         let screen_data = {
@@ -48,19 +48,20 @@ const HomeScreen = (props) => {
                     sx = {{
                         position: 'fixed',
                         bottom: 0,
-                        width: '100%'
+                        width: '100%',
+                        backgroundColor: '#000000'
                     }}
-                    elevation = {3}
-                >
+                    elevation = {10}>
+
                     <BottomNavigation
                         showLabels
                         value={value}
                         onChange={(event, newValue) => {
                             setValue(newValue);
-                        }}
-                        >
-                        <BottomNavigationAction label="Home" icon={<HomeIcon />} />
-                        <BottomNavigationAction label="Projects" icon={<CodeIcon />} />
+                        }}>
+
+                        <BottomNavigationAction label="Home" icon={<HomeIcon />}/>
+                        <BottomNavigationAction label="Projects" icon={<CodeIcon />}/>
                         <BottomNavigationAction label="Experience" icon={<WorkIcon />} />
                     </BottomNavigation>
                 </Paper>

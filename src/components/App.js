@@ -9,6 +9,7 @@ const _ = require('lodash')
 const App = (props) => {
     const theme = createTheme({
         palette: {
+            mode: 'dark',
             primary: {
                 main: '#38A64D'
             },

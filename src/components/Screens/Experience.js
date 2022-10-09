@@ -6,7 +6,7 @@ import { createTheme, ThemProvider, styled } from '@mui/material/styles';
 //import '../styles/Analytics.css';
 import Screen from '../HomeScreen'
 
-const Analytics = (props) => {
+const Experience = (props) => {
 
     const initAppData = () => {
         let number_of_screens = 4
@@ -19,10 +19,10 @@ const Analytics = (props) => {
 
     return (
         <div>
-            <p>Analytics</p>
+            <p>Experience</p>
         </div>
 
     )
 }
 
-export default Analytics;
+export default Experience;

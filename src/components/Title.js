@@ -2,8 +2,6 @@ import { color, ThemeProvider } from '@mui/system';
 import React, { useState, useEffect } from 'react';
 import { createTheme, ThemProvider, styled } from '@mui/material/styles';
 
-import Screen from '../HomeScreen'
-
 const Title = (props) => {
 
     const initAppData = () => {
@@ -13,14 +11,17 @@ const Title = (props) => {
         }
         return app_data
     }
+
     const [appData, setAppData] = useState(initAppData())    
 
     return (
         <div>
-            <p>Title</p>
+            <div className="title-container">
+                <p className="title">$ {props.title}</p>
+            </div>
         </div>
-
     )
+
 }
 
 export default Title;

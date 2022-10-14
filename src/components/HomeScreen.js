@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
@@ -10,6 +11,8 @@ import Divider from '@mui/material/Divider';
 import Home from './Screens/Home';
 import Experience from './Screens/Experience';
 import Projects from './Screens/Projects';
+import { useTheme } from '@mui/material/styles';
+
 
 //import Cell from './Cell';
 //import AppHeader from './AppHeader';
@@ -36,38 +39,51 @@ const HomeScreen = (props) => {
         return screen_data
     }
 
-    const [screenData, setScreenData] = useState(initScreenData())    
-    const [value, setValue] = useState(0)    
+    const [screenData, setScreenData] = useState(initScreenData());   
+    const [value, setValue] = useState(0);
+    
+    let theme = useTheme();
 
     return (
 
-        <div className="screen">
-            <Box>
-                {bottom_nav_screens[value]}
-                <Paper 
+            <Container
+                sx = {{
+                    height: "100%",
+                    margin: "0",
+                    padding: "0",
+                }}
+            >
+                <Box className="screen"
+                    sx = {{
+                        height: "80vh",
+                        margin: "5%",
+                        marginBottom: "10%",
+                        border: '1px solid blue'
+                    }}
+                    >
+                    {bottom_nav_screens[value]}
+
+                </Box>
+                <BottomNavigation
                     sx = {{
                         position: 'fixed',
                         bottom: 0,
-                        width: '100%',
-                        backgroundColor: '#000000'
+                        width: "100%"
                     }}
-                    elevation = {10}>
+                    showLabels
+                    value={value}
+                    onChange={(event, newValue) => {
+                        setValue(newValue);
+                    }}>
 
-                    <BottomNavigation
-                        showLabels
-                        value={value}
-                        onChange={(event, newValue) => {
-                            setValue(newValue);
-                        }}>
+                    <BottomNavigationAction label="Home" icon={<HomeIcon />}/>
+                    <BottomNavigationAction label="Projects" icon={<CodeIcon />}/>
+                    <BottomNavigationAction label="Experience" icon={<WorkIcon />} />
+                </BottomNavigation>
 
-                        <BottomNavigationAction label="Home" icon={<HomeIcon />}/>
-                        <BottomNavigationAction label="Projects" icon={<CodeIcon />}/>
-                        <BottomNavigationAction label="Experience" icon={<WorkIcon />} />
-                    </BottomNavigation>
-                </Paper>
-            </Box>
+                    
+            </Container>
             
-        </div>
     )
 }
 

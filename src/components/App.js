@@ -1,6 +1,7 @@
 import { color, ThemeProvider } from '@mui/system';
 import React, { useState, useEffect } from 'react';
 import { createTheme, ThemProvider, styled } from '@mui/material/styles';
+import "../styles/App.css"
 
 import HomeScreen from './HomeScreen';
 
@@ -11,10 +12,14 @@ const App = (props) => {
         palette: {
             mode: 'dark',
             primary: {
-                main: '#38A64D'
+                main: '#38A64D',
+                dark: '#0A1929'
+
+
             },
             secondary: {
                 main: '#A63892',
+                dark: '#0A1929'
             }
         }
     })
@@ -37,7 +42,7 @@ const App = (props) => {
         return app_data
     }
     const [appData, setAppData] = useState(initAppData())   
-    
+    //console.log(theme);
 
     return (
         <ThemeProvider theme={theme}>

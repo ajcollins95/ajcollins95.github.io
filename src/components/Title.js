@@ -17,7 +17,7 @@ const Title = (props) => {
     return (
         <div>
             <div className="title-container">
-                <p className="title">$ {props.title}</p>
+                $ {props.title}
             </div>
         </div>
     )

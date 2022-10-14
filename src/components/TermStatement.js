@@ -18,23 +18,37 @@ import '../styles/TermStatement.css';
 
 
 const TermStatement = (props) => {
-    
+    //Turns all terminal data into something that looks terminal-like
 
-    const initAppData = () => {
-        let number_of_screens = 4
-        let app_data = {
-            screen: [...Array(number_of_screens).keys()]
+    const formatOutput = () => {
+
+        let output = props.outputContent
+        switch (typeof output) {
+            case 'string':
+                return <p className="output-string">{output}</p>
+                break;
+            case 'object':
+                if (Array.isArray(output)) {
+                    return <p>[{output.join(", ")}]</p>
+                }
+                else {
+
+                }
+                break;
+          
+                
+            default:
+                alert("Something has gone wrong in Term Statement frmoutput")
+                break;
         }
-        return app_data
+        
     }
-    console.log(props.input);
-
-    const [appData, setAppData] = useState(initAppData())    
+    console.log(props.input)
 
     return (
         <Box>
-            <p className="input">$ {props.input}</p>
-            <p className="output">{}</p>
+            <p className="input">$ AJ.{props.input}</p>
+            {formatOutput()}
         </Box>
         
     )

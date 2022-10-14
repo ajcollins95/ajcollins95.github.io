@@ -4,8 +4,7 @@
     height: 20px;
 }
 
-.terminal-log {
+.terminal-log > *{
     border: 1px solid green;
     border-radius: 5px;
-    height: 100px;
 }

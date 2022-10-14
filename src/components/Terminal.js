@@ -19,15 +19,27 @@ import TermStatement from './TermStatement';
 
 
 const Terminal = (props) => {
-    const terminal_data = {
+    const terminalData = {
         currentLocation: "Baltimore, MD",
         contactInfo: {
-            email: "ajcollins95@gmail.com",
-            linkedIn: "(LI link)",
-            github: "(gh link)"
+            email: [
+                "email",
+                "ajcollins95@gmail.com"
+            ],
+            linkedIn: [
+                "Linked In",
+                "LI link"
+            ],
+            github: [
+                "GitHub",
+                "Github Link"
+            ]
         },
         resume: {
-            
+            resume: [
+                "ajcollins.pdf",
+                "link to pdf"
+            ]
         },
         interests: [
             "ultimate frisbee",
@@ -60,10 +72,10 @@ const Terminal = (props) => {
 
     const logTerminal = () => {
         const terminalLog = []
-        Object.keys(terminal_data).forEach(key => {
+        Object.keys(terminalData).forEach(key => {
             //console.log(key);
             //<TermStatement input={key} />
-            terminalLog.push(<p>{key}</p>)
+            terminalLog.push(<TermStatement input={key} outputContent={terminalData[key]}/>)
             
         })
         return <div>{terminalLog}</div>

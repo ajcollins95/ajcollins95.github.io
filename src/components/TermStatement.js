@@ -20,19 +20,32 @@ import '../styles/TermStatement.css';
 const TermStatement = (props) => {
     //Turns all terminal data into something that looks terminal-like
 
+    const formatLinks = (linkData) => {
+        const links = [<span>[</span>]
+        Object.keys(linkData).forEach(key => {
+            links.push(<span>"</span>)
+            const text = linkData[key][0]
+            const url = linkData[key][1]
+            links.push(<a href={url}>{text}</a>)
+            links.push(<span>", "</span>)
+        })
+        return <div className="output-links">{links}</div>
+    }
+
+
     const formatOutput = () => {
 
         let output = props.outputContent
         switch (typeof output) {
             case 'string':
-                return <p className="output-string">{output}</p>
+                return <p className="output-string">"{output}"</p>
                 break;
             case 'object':
                 if (Array.isArray(output)) {
-                    return <p>[{output.join(", ")}]</p>
+                    return <p className="output-string">["{output.join("\", \"")}"]</p>
                 }
                 else {
-
+                    return formatLinks(output)
                 }
                 break;
           
@@ -43,7 +56,6 @@ const TermStatement = (props) => {
         }
         
     }
-    console.log(props.input)
 
     return (
         <Box>

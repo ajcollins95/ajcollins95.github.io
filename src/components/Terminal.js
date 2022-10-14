@@ -47,7 +47,7 @@ const Terminal = (props) => {
             "mental health",
             "bible"
         ],
-        education: "B.Sc. Mechanical Engineering - Carnegie-Mellon University",
+        education: "B.Sc. Mechanical Engineering; Carnegie-Mellon University",
         skills: [
             "Python",
             "JavaScript",
@@ -57,7 +57,7 @@ const Terminal = (props) => {
             "MATLAB",
             "CAD"
         ],
-        nextJob: "Error: Not Found" //something to indicate I'm looking
+        nextAdventure: "Searching for 'nextAdventure' ..." //something to indicate I'm looking
 
 
     }

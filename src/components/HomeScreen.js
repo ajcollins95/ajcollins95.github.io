@@ -51,14 +51,16 @@ const HomeScreen = (props) => {
                     height: "100%",
                     margin: "0",
                     padding: "0",
+                    backgroundColor: "#252525",
+                    border: '2px solid yellow'
                 }}
             >
                 <Box className="screen"
                     sx = {{
-                        height: "80vh",
+                        height: "100%",
                         margin: "5%",
                         marginBottom: "10%",
-                        border: '1px solid blue'
+                        
                     }}
                     >
                     {bottom_nav_screens[value]}

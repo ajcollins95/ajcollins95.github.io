@@ -4,12 +4,13 @@ import { createTheme, ThemProvider, styled } from '@mui/material/styles';
 import AddIcon from "@mui/icons-material/Add";
 import Fab from '@mui/material/Fab';
 
+import '../../styles/Home.css'
 import Title from '../Title';
 import Terminal from '../Terminal';
 
 const Home = (props) => {
 
-    let blurb = "I am an engineer on the R&D team at Bowler Pons. I am passionate about building elegant software solutions to complex problems!"
+    let blurb = "I am currently an R&D engineer at BPSC. I am passionate about building elegant software solutions to solve complex problems!"
 
     const initAppData = () => {
         let number_of_screens = 4

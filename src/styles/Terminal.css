@@ -1,8 +1,9 @@
 .terminal-header {
-    border: 1px solid red;
+    border: 0px solid red;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     height: 20px;
+    background-color: rgb(114, 95, 95);;
 }
 
 .terminal-log > *{
@@ -11,5 +12,14 @@
     border-bottom-right-radius: 5px;
     background-color: var(--pallet-bg);
     color: var(--pallet-neutral)
+}
+
+.button-container {
+    width: 50px;
+    height: 20px;
+    border: 1px solid green;
+    margin-right: 10%;
+    right: 0px;
+    position: absolute;
 }
 

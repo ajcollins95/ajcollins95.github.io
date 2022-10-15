@@ -1,3 +1,8 @@
 .title-container {
-    font-size: 100px;
+    font-size: 2em;
+    color: var(--pallet-hot)
+}
+
+.title-cursor {
+    color: var(--pallet-off-neutral)
 }

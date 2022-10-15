@@ -27,8 +27,8 @@ const App = (props) => {
         palette: {
             mode: 'dark',
             primary: {
-                main: '#38A64D',
-                dark: '#0A1929'
+                main: '#FFFD98',
+                dark: '#FFFD98'
 
 
             },
@@ -56,8 +56,8 @@ const App = (props) => {
         }
         return app_data
     }
+
     const [appData, setAppData] = useState(initAppData())   
-    //console.log(theme);
 
     return (
         <ThemeProvider theme={theme}>

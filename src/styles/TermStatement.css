@@ -10,9 +10,9 @@ input > p {
 
 .output-string {
     margin: 0;
-    color: var(--pallet-hot);
+    color: var(--pallet-off-neutral);
 }
 
 .output-links > span {
-    color: var(--pallet-hot);
+    color: var(--pallet-off-neutrall);
 }

@@ -1,6 +1,9 @@
 import { color, ThemeProvider } from '@mui/system';
 import React, { useState, useEffect } from 'react';
 import { createTheme, ThemProvider, styled } from '@mui/material/styles';
+import '../styles/Title.css'
+
+import Cursor from './Cursor'; 
 
 const Title = (props) => {
 
@@ -17,7 +20,7 @@ const Title = (props) => {
     return (
         <div>
             <div className="title-container">
-                $ {props.title}
+                $ {props.title}<Cursor className="title-cursor"/>
             </div>
         </div>
     )

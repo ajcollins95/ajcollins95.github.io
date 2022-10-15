@@ -17,7 +17,6 @@ import { useTheme } from '@mui/material/styles';
 import '../styles/Terminal.css';
 import TermStatement from './TermStatement';
 
-
 const Terminal = (props) => {
     const terminalData = {
         currentLocation: "Baltimore, MD",
@@ -47,7 +46,7 @@ const Terminal = (props) => {
             "mental health",
             "bible"
         ],
-        education: "B.Sc. Mechanical Engineering; Carnegie-Mellon University",
+        education: "B. Sc. Mechanical Engineering; Carnegie-Mellon University",
         skills: [
             "Python",
             "JavaScript",
@@ -110,9 +109,8 @@ const Terminal = (props) => {
 
     return (
         <Container
-        sx = {{
-            border: '1px solid orange'
-        }}>
+        disableGutters="True"
+        >
             <div className="terminal-container">
                 <div className="terminal-header">
 

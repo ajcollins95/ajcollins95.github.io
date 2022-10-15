@@ -9,6 +9,8 @@ import Terminal from '../Terminal';
 
 const Home = (props) => {
 
+    let blurb = "I am an engineer on the R&D team at Bowler Pons. I am passionate about building elegant software solutions to complex problems!"
+
     const initAppData = () => {
         let number_of_screens = 4
         let app_data = {
@@ -27,8 +29,8 @@ const Home = (props) => {
 
     return (
         <div>
-            <Title title="aj-collins"/>
-            <p className="blurb">I'm me</p>
+            <Title title="AJ-Collins"/>
+            <p className="blurb">{blurb}</p>
             <Terminal/>
 
         </div>

@@ -3,11 +3,16 @@
     margin-top: 5%;
 }
 
+input > p {
+    background-color: var(--pallet-bg);
+
+}
+
 .output-string {
     margin: 0;
     color: var(--pallet-hot);
 }
 
-.ouput-links > span {
+.output-links > span {
     color: var(--pallet-hot);
 }

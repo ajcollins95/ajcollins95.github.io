@@ -23,11 +23,11 @@ const TermStatement = (props) => {
     const formatLinks = (linkData) => {
         const links = [<span>[</span>]
         Object.keys(linkData).forEach(key => {
-            links.push(<span>"</span>)
+            //links.push(<span>"</span>)
             const text = linkData[key][0]
             const url = linkData[key][1]
             links.push(<a href={url}>{text}</a>)
-            links.push(<span>", "</span>)
+            //links.push(<span>", "</span>)
         })
         return <div className="output-links">{links}</div>
     }

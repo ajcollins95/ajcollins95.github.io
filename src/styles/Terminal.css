@@ -6,7 +6,7 @@
 }
 
 .terminal-log > *{
-    border: 1px solid green;
+    border: 1px solid var(--pallet-bg);
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     background-color: var(--pallet-bg);

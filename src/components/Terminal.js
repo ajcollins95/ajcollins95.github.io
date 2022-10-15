@@ -59,7 +59,7 @@ const Terminal = (props) => {
             terminalLog.push(<TermStatement input={key} outputContent={terminalData[key]}/>)
             
         })
-        terminalLog.push(<Cursor />)
+        terminalLog.push(<Cursor className="terminal-cursor"/>)
         return <div>{terminalLog}</div>
     }
 

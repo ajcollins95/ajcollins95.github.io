@@ -6,6 +6,10 @@
     background-color: rgb(114, 95, 95);;
 }
 
+.terminal-cursor {
+    color: var(--pallet-off-neutral);
+}
+
 .terminal-log > *{
     border: 1px solid var(--pallet-bg);
     border-bottom-left-radius: 5px;

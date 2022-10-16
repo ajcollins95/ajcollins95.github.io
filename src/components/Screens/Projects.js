@@ -16,6 +16,15 @@ const Projects = (props) => {
         return app_data
     }
     const [appData, setAppData] = useState(initAppData())    
+    /**
+     * Have like a bunch of cards that say problem on them. 
+     * Give brief problem descriptions of each one
+     * Have a solution button
+     * Card opens up and you can see a brief solution description,
+     * as well as source code and live demo. 
+     * Opening is animated.
+     * Might need to learn router for this.
+     */
 
     return (
         <div>

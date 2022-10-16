@@ -12,15 +12,15 @@ const Terminal = (props) => {
         currentLocation: "Baltimore, MD",
         contactInfo: {
             email: [
-                "email",
+                "gmail",
                 "ajcollins95@gmail.com"
             ],
             linkedIn: [
-                "Linked In",
+                "linkedIn",
                 "LI link"
             ],
             github: [
-                "GitHub",
+                "gitHub",
                 "Github Link"
             ]
         },
@@ -39,12 +39,12 @@ const Terminal = (props) => {
         education: "B. Sc. Mechanical Engineering; Carnegie-Mellon University",
         skills: [
             "Python",
-            "JavaScript",
-            "React",
             "C#",
+            "JavaScript",
+            "node.js",
+            "React.js",
             "git",
-            "MATLAB",
-            "CAD"
+            "MATLAB"
         ],
         nextAdventure: "Searching for nextAdventure..." //something to indicate I'm looking
 

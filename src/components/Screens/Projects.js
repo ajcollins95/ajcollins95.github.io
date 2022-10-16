@@ -4,6 +4,7 @@ import { createTheme, ThemProvider, styled } from '@mui/material/styles';
 import Stack from '@mui/material/Stack';
 //import AppHeader from './AppHeader';
 //import '../styles/Projects.css';
+import ProjectCard from '../ProjectCard';
 import Title from '../Title'
 import _ from 'lodash';
 
@@ -22,7 +23,7 @@ const Projects = (props) => {
         {
             title: "Portfolio",
             problem: "I needed to come up with a way to convince non-technical decision makers" +
-            "that I am a competent software professional",
+            " that I am a competent software professional",
             sourceCode: "github link",
             liveDemo: "live link",
             solution: "Build a dev portfolio! I documented the process more " +
@@ -57,16 +58,21 @@ const Projects = (props) => {
      * Might need to learn router for this.
      */
 
+     const renderProjects = () => {
+        //returns a div with all of the logged terminal statements
+        const projects = []
+        projectData.forEach(proj => {
+            projects.push(<ProjectCard data={proj}/>)
+            
+        })
+        return <Stack spacing={1}>{projects}</Stack>
+    }
+
+
     return (
         <div>
             <Title title="Projects"/>
-            <Stack spacing={1}>
-                <div>uno</div>
-                <div>dos</div>
-                <div>tres</div>
-
-            </Stack>
-
+            {renderProjects()}
         </div>
 
     )

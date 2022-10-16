@@ -64,7 +64,7 @@ const App = (props) => {
     const [appData, setAppData] = useState(initAppData())   
 
     return (
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={theme} className="theme-provider">
             <HomeScreen appData={appData}/>
         </ThemeProvider>
 

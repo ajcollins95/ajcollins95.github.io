@@ -53,7 +53,11 @@ const Terminal = (props) => {
         //returns a div with all of the logged terminal statements
         const terminalLog = []
         Object.keys(terminalData).forEach(key => {
-            terminalLog.push(<TermStatement input={key} outputContent={terminalData[key]}/>)
+            terminalLog.push(<TermStatement 
+                input={key} 
+                outputContent={terminalData[key]}
+                key={key}
+            />)
             
         })
         terminalLog.push(<Cursor className="terminal-cursor"/>)

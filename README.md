@@ -73,3 +73,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### TODO
 Add typing animation to Title.js
 Add windows closing circles to terminal
+Make links active
+Make bottom nav have un selected options be the link color

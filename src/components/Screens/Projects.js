@@ -3,8 +3,9 @@ import React, { useState, useEffect } from 'react';
 import { createTheme, ThemProvider, styled } from '@mui/material/styles';
 import Stack from '@mui/material/Stack';
 //import AppHeader from './AppHeader';
-//import '../styles/Projects.css';
+import '../../styles/Projects.css';
 import ProjectCard from '../ProjectCard';
+import Divider from "@mui/material/Divider"
 import Title from '../Title'
 import _ from 'lodash';
 
@@ -65,13 +66,13 @@ const Projects = (props) => {
             projects.push(<ProjectCard data={proj}/>)
             
         })
-        return <Stack spacing={1}>{projects}</Stack>
+        return <Stack spacing={1} sx={{marginTop: '2%'}}>{projects}</Stack>
     }
 
 
     return (
         <div>
-            <Title title="Projects"/>
+            <Title title="Projects" className="projects-title"/>
             {renderProjects()}
         </div>
 

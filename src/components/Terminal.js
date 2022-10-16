@@ -46,7 +46,7 @@ const Terminal = (props) => {
             "MATLAB",
             "CAD"
         ],
-        nextAdventure: "Searching for 'nextAdventure' ..." //something to indicate I'm looking
+        nextAdventure: "Searching for nextAdventure..." //something to indicate I'm looking
 
 
     }

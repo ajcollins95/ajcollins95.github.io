@@ -1,8 +1,8 @@
 :root {
   --pallet-bg: #2E0A21;
-  --pallet-hot: #D81E5B;
-  --pallet-cool: #FFFD98;
-  --pallet-neutral: #59C9A5;
+  --pallet-neutral: #D81E5B;
+  --pallet-hot: #FFFD98;
+  --pallet-cool: #59C9A5;
   --pallet-off-neutral: #B9E3C6; 
 
   --pallet-app-bg: #252525;
@@ -16,6 +16,7 @@ body {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--pallet-app-bg);
 }
 
 code {
@@ -26,10 +27,4 @@ code {
 @font-face{
   font-family: source-code-pro;
   src: url("../fonts/SourceCodePro-VariableFont_wght.ttf")
-}
-
-html {
-  border-color: yellow;
-  border-width: solid;
-  border-width: 2px;
 }

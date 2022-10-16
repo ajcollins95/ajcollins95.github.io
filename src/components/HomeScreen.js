@@ -13,10 +13,12 @@ import Experience from './Screens/Experience';
 import Projects from './Screens/Projects';
 import { useTheme } from '@mui/material/styles';
 
-
-//import Cell from './Cell';
-//import AppHeader from './AppHeader';
-//import '../styles/App.css';
+/**
+ * 
+ * YOU NEED TO WRITE TESTS TO CHECK IF LINKS WORK!
+ * Maybe a URL/Link to confirm they work asynchrocnously
+ * 
+ */
 
 const HomeScreen = (props) => {  
     
@@ -51,8 +53,7 @@ const HomeScreen = (props) => {
                     height: "100%",
                     margin: "0",
                     padding: "0",
-                    backgroundColor: "#252525",
-                    border: '2px solid yellow'
+                    border: '0px solid yellow'
                 }}
             >
                 <Box className="screen"

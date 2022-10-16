@@ -1,3 +1,7 @@
 .blurb {
     color: var(--pallet-off-neutral);
 }
+
+.blurb > a {
+    color: var(--pallet-cool)
+}

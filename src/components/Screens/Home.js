@@ -10,7 +10,10 @@ import Terminal from '../Terminal';
 
 const Home = (props) => {
 
-    let blurb = "I am currently an R&D engineer at BPSC. I am passionate about building elegant software solutions to solve complex problems!"
+    let blurb = {
+        one: "I am currently an R&D engineer at ",
+        two: ". I am passionate about building elegant software solutions to solve complex problems!"
+    }
 
     const initAppData = () => {
         let number_of_screens = 4
@@ -31,7 +34,12 @@ const Home = (props) => {
     return (
         <div>
             <Title title="AJ-Collins"/>
-            <p className="blurb">{blurb}</p>
+            <p className="blurb">
+                {blurb.one}
+                <a href="link to bpsc">BPSC
+                </a>
+                {blurb.two}
+            </p>
             <Terminal/>
 
         </div>

@@ -71,4 +71,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 ### TODO
-
+Add typing animation to Title.js
+Add windows closing circles to terminal

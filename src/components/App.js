@@ -8,6 +8,8 @@ import HomeScreen from './HomeScreen';
 const _ = require('lodash')
 
 const App = (props) => {
+    //create a "theme" for MUI colors
+    //this mostly just makes the navbar black
     const theme = createTheme({
         typography: {
             fontFamily: [
@@ -27,8 +29,8 @@ const App = (props) => {
         palette: {
             mode: 'dark',
             primary: {
-                main: '#FFFD98',
-                dark: '#FFFD98'
+                main: '#59C9A5',
+                dark: '#59C9A5'
 
 
             },
@@ -57,6 +59,8 @@ const App = (props) => {
         return app_data
     }
 
+
+    //makes appData a responsive state variable
     const [appData, setAppData] = useState(initAppData())   
 
     return (

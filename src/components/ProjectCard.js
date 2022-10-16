@@ -3,8 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { createTheme, ThemProvider, styled } from '@mui/material/styles';
 import "../styles/Cursor.css"
 
-//Renders a blinking terminal cursor
-const Cursor = (props) => {
+const ProjectCard = (props) => {
 
     return (
         <span className="cursor">&#x25AE;</span> // Switching last digit between E and F changes color
@@ -12,4 +11,4 @@ const Cursor = (props) => {
     )
 }
 
-export default Cursor;
+export default ProjectCard;

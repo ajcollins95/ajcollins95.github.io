@@ -3,11 +3,9 @@ import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-import Paper from '@mui/material/Paper';
 import HomeIcon from '@mui/icons-material/Home';
 import CodeIcon from '@mui/icons-material/Code';
 import WorkIcon from '@mui/icons-material/Work';
-import Divider from '@mui/material/Divider';
 import Home from './Screens/Home';
 import Experience from './Screens/Experience';
 import Projects from './Screens/Projects';
@@ -53,7 +51,6 @@ const HomeScreen = (props) => {
                     height: "100%",
                     margin: "0",
                     padding: "0",
-                    border: '0px solid yellow'
                 }}
             >
                 <Box className="screen"
@@ -64,6 +61,7 @@ const HomeScreen = (props) => {
                         
                     }}
                     >
+                    
                     {bottom_nav_screens[value]}
 
                 </Box>

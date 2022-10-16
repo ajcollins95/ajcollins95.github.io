@@ -1,12 +1,12 @@
-import { color, ThemeProvider } from '@mui/system';
 import React, { useState, useEffect } from 'react';
-import { createTheme, ThemProvider, styled } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 
 import '../styles/Terminal.css';
 import TermStatement from './TermStatement';
 import Cursor from './Cursor';
 
+
+//TODO add top right closing circles
 const Terminal = (props) => {
     const terminalData = {
         currentLocation: "Baltimore, MD",
@@ -47,15 +47,12 @@ const Terminal = (props) => {
             "MATLAB"
         ],
         nextAdventure: "Searching for nextAdventure..." //something to indicate I'm looking
-
-
     }
 
     const logTerminal = () => {
+        //returns a div with all of the logged terminal statements
         const terminalLog = []
         Object.keys(terminalData).forEach(key => {
-            //console.log(key);
-            //<TermStatement input={key} />
             terminalLog.push(<TermStatement input={key} outputContent={terminalData[key]}/>)
             
         })

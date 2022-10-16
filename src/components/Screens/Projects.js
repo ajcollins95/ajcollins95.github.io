@@ -1,10 +1,11 @@
 import { color, ThemeProvider } from '@mui/system';
 import React, { useState, useEffect } from 'react';
 import { createTheme, ThemProvider, styled } from '@mui/material/styles';
-//import Cell from './Cell';
+import Stack from '@mui/material/Stack';
 //import AppHeader from './AppHeader';
 //import '../styles/Projects.css';
-import Screen from '../HomeScreen'
+import Title from '../Title'
+import _ from 'lodash';
 
 const Projects = (props) => {
 
@@ -15,7 +16,37 @@ const Projects = (props) => {
         };
         return app_data
     }
-    const [appData, setAppData] = useState(initAppData())    
+    const [appData, setAppData] = useState(initAppData()) 
+    
+    const projectData = [
+        {
+            title: "Portfolio",
+            problem: "I needed to come up with a way to convince non-technical decision makers" +
+            "that I am a competent software professional",
+            sourceCode: "github link",
+            liveDemo: "live link",
+            solution: "Build a dev portfolio! I documented the process more " +
+            "in the linked source code readme"
+        },
+        {
+            title: "Google foo.bar",
+            problem: "Google foo.bar is Google's secret (shh!) hiring app. So... " +
+            "prove that I have the technical capacity to work for Google?",
+            sourceCode: "github link",
+            liveDemo: "live link",
+            solution: "This is essentially in the readme where I describe each " +
+            "given problem and my solution to them."
+        },
+        {
+            title: "Minesweeper",
+            problem: "Find a way to demonstrate my audacity and capacity in building" +
+            "an attractive and reactive web app.",
+            sourceCode: "github link",
+            liveDemo: "live link",
+            solution: "I built minesweeper in react! I used a DFS pathfinding algorithm to uncover empty squares." +
+            "I attempted to model my game after Google's minesweeper clone."
+        },
+    ]
     /**
      * Have like a bunch of cards that say problem on them. 
      * Give brief problem descriptions of each one
@@ -28,7 +59,14 @@ const Projects = (props) => {
 
     return (
         <div>
-            <p>Projects</p>
+            <Title title="Projects"/>
+            <Stack spacing={1}>
+                <div>uno</div>
+                <div>dos</div>
+                <div>tres</div>
+
+            </Stack>
+
         </div>
 
     )

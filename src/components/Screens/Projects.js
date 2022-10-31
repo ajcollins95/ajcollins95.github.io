@@ -37,7 +37,7 @@ const Projects = (props) => {
             sourceCode: "github link",
             liveDemo: "live link",
             solution: "This is essentially in the readme where I describe each " +
-            "given problem and my solution to them."
+            "given problem and my solutions to them."
         },
         {
             title: "Minesweeper",

@@ -1,6 +1,6 @@
 import { color, ThemeProvider } from '@mui/system';
 import React, { useState, useEffect } from 'react';
-import { createTheme, ThemProvider, styled } from '@mui/material/styles';
+import { createTheme, ThemProvider, styled, useTheme } from '@mui/material/styles';
 //import Cell from './Cell';
 //import AppHeader from './AppHeader';
 //import '../styles/Analytics.css';
@@ -10,6 +10,8 @@ import Title from '../Title'
 import ExperienceCard from '../ExperienceCard'
 
 const Experience = (props) => {
+
+    const theme = useTheme()
 
     const experienceList = [
         {
@@ -45,7 +47,7 @@ const Experience = (props) => {
         //w/e
         const experiences = []
         experienceList.forEach(exp => {
-            experiences.push(<ExperienceCard data={exp}/>)
+            experiences.push(<ExperienceCard data={exp} />)
             
         })
         return <Stack spacing={1} sx={{marginTop: '2%'}}>{experiences}</Stack>

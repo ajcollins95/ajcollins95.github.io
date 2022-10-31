@@ -1,9 +1,9 @@
 import { color, ThemeProvider } from '@mui/system';
 import React, { useState, useEffect } from 'react';
-import { createTheme, ThemProvider, styled } from '@mui/material/styles';
+import { createTheme, ThemProvider, styled, useTheme } from '@mui/material/styles';
 import Stack from '@mui/material/Stack';
 //import AppHeader from './AppHeader';
-import '../../styles/Projects.css';
+//import '../../styles/Projects.css';
 import ProjectCard from '../ProjectCard';
 import Divider from "@mui/material/Divider"
 import Title from '../Title'
@@ -58,6 +58,10 @@ const Projects = (props) => {
      * Opening is animated.
      * Might need to learn router for this.
      */
+    const theme = useTheme()
+    const projTheme = createTheme(theme, {
+
+    })
 
      const renderProjects = () => {
         //returns a div with all of the logged terminal statements

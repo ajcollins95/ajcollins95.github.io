@@ -22,7 +22,7 @@ const Home = (props) => {
                 </a>
                 {blurb.two}
             </p>
-            <Terminal/>
+            <Terminal appTheme={props.appTheme}/>
 
         </div>
 

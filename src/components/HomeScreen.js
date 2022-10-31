@@ -21,28 +21,16 @@ import { useTheme } from '@mui/material/styles';
 const HomeScreen = (props) => {  
     
     let bottom_nav_screens = [
-        <Home />,
+        <Home appTheme={props.appTheme}/>,
         <Projects />,
         <Experience />,
     ]
 
-    const initScreenData = () => {
-        let bottom_nav_screens = [
-            <Home />,
-            <Projects />,
-            <Experience />,
-        ]
-
-        let screen_data = {
-            nav_screen: bottom_nav_screens[0]
-        }
-        return screen_data
-    }
-
-    const [screenData, setScreenData] = useState(initScreenData());   
     const [value, setValue] = useState(0);
-    
     let theme = useTheme();
+    const sxTest = {
+        color: theme.palette.info.main
+    }
 
     return (
 
@@ -70,7 +58,7 @@ const HomeScreen = (props) => {
                     sx = {{
                         position: 'fixed',
                         bottom: 0,
-                        width: "100%"
+                        width: "100%",
                     }}
                     showLabels
                     value={value}
@@ -78,9 +66,9 @@ const HomeScreen = (props) => {
                         setValue(newValue);
                     }}>
 
-                    <BottomNavigationAction label="Home" icon={<HomeIcon />}/>
-                    <BottomNavigationAction label="Projects" icon={<CodeIcon />}/>
-                    <BottomNavigationAction label="Experience" icon={<WorkIcon />} />
+                    <BottomNavigationAction label="Home" icon={<HomeIcon />} sx={sxTest}/>
+                    <BottomNavigationAction label="Projects" icon={<CodeIcon />} sx={sxTest}/>
+                    <BottomNavigationAction label="Experience" icon={<WorkIcon />} sx={sxTest}  />
                 </BottomNavigation>
 
                     

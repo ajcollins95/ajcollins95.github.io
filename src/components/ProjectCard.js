@@ -13,7 +13,11 @@ import { red } from '@mui/material/colors';
 import CodeIcon from '@mui/icons-material/Code';
 import WebIcon from '@mui/icons-material/Web';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
+import Tooltip from '@mui/material/Tooltip';
+import { createTheme, ThemProvider, useTheme } from '@mui/material/styles';
+
+
+
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -33,55 +37,64 @@ export default function ProjectCard(props) {
     setExpanded(!expanded);
   };
 
+  const theme = useTheme()
+
+  const ttColor = '#2E0A21'
+
   return (
     <Card sx={{ 
         maxWidth: 345,
-        backgroundColor: "#2E0A21"
+        backgroundColor: theme.palette.secondary.dark
     }}
       variant="outlined"
 
         >
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: "#D81E5B" }} aria-label="header">
+          <Avatar sx={{ bgcolor: theme.palette.secondary.main }} aria-label="header">
             {props.data.title[0]}
           </Avatar>
         }
         titleTypographyProps = {{
           variant: 'h6'
         }}
+        sx={{color: theme.palette.primary.main}}
         title={props.data.title}
       />
       
 
       <CardContent>
-        <Typography>
-          problem
+        <Typography color="primary.main">
+          Problem
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="body2" color={theme.palette.text.primary}>
           {props.data.problem}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="view source code">
-          <CodeIcon sx={{ color: "#59C9A5"}} />
-        </IconButton>
-        <IconButton aria-label="share">
-          <WebIcon sx={{ color: "#59C9A5"}}/>
-        </IconButton>
+        <Tooltip title="source code" sx={{backgroundColor: theme.palette.secondary.dark}}>
+          <IconButton aria-label="source code">
+            <CodeIcon sx={{ color: theme.palette.info.main}} />
+          </IconButton>
+        </Tooltip>
+        <Tooltip title="live demo">
+          <IconButton aria-label="view live demo">
+            <WebIcon sx={{ color: theme.palette.info.main}}/>
+          </IconButton>
+        </Tooltip>
         <ExpandMore
           expand={expanded}
           onClick={handleExpandClick}
           aria-expanded={expanded}
           aria-label="show more"
         >
-          <ExpandMoreIcon sx={{ color: "#59C9A5"}}/>
+          <ExpandMoreIcon sx={{ color: theme.palette.info.main}}/>
         </ExpandMore>
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography >solution</Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography color={theme.palette.primary.main}>Solution</Typography>
+          <Typography variant="body2" color={theme.palette.text.primary}>
             {props.data.solution}
           </Typography>
 

@@ -12,8 +12,11 @@ const App = (props) => {
     //this mostly just makes the navbar black
     const theme = createTheme({
         typography: {
+            body2: {
+                fontFamily: '"Ubuntu"'
+            },
             fontFamily: [
-                "Source Code Pro",
+                '"Ubuntu"', //Main Font
                 '-apple-system',
                 'BlinkMacSystemFont',
                 '"Segoe UI"',
@@ -25,22 +28,29 @@ const App = (props) => {
                 '"Segoe UI Emoji"',
                 '"Segoe UI Symbol"',
               ].join(','),
+              fontSize: 14,
+              fontWeightLight: 300,
+              fontWeightRegular: 400,
+              fontWeightMedium: 500,
         },
         palette: {
             mode: 'dark',
-            primary: {
-                main: '#59C9A5',
-                dark: '#59C9A5'
-
-
-            },
             secondary: {
-                main: '#A63892',
-                dark: '#0A1929'
+                main: '#D81E5B', //light red
+                dark: '#2E0A21' //dark red
+            },
+            primary: {
+                main: '#FFFD98', //yellow
+            },
+            info: {
+                main: "#59C9A5" //light blue
+            },
+            text: {
+                primary: "#B9E3C6" //off-white
             }
         }
     })
-
+ 
     const handleScreenChange = (screen) => {
         //make a state clone
         let appDataClone = _.cloneDeep(appData)
@@ -65,7 +75,7 @@ const App = (props) => {
 
     return (
         <ThemeProvider theme={theme} className="theme-provider">
-            <HomeScreen appData={appData}/>
+            <HomeScreen appData={appData} appTheme={theme}/>
         </ThemeProvider>
 
     )

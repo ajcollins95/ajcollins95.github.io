@@ -15,7 +15,7 @@ const Projects = (props) => {
             title: "Portfolio",
             problem: "I needed to come up with a way to convince non-technical decision makers" +
             " that I am a competent software professional",
-            sourceCode: "github link",
+            sourceCode: "https://github.com/ajcollins95/dev-portfolio",
             liveDemo: "live link",
             solution: "Build a dev portfolio! I documented the process more " +
             "in the linked source code readme",
@@ -37,7 +37,7 @@ const Projects = (props) => {
             title: "Minesweeper",
             problem: "Find a way to demonstrate my audacity and capacity in building" +
             "an attractive and reactive web app.",
-            sourceCode: "github link",
+            sourceCode: "https://github.com/ajcollins95/custom-minesweeper",
             liveDemo: "live link",
             solution: "I built minesweeper in react! I used a DFS pathfinding algorithm to uncover empty squares." +
             "I attempted to model my game after Google's minesweeper clone.",
@@ -56,13 +56,11 @@ const Projects = (props) => {
         return <Stack spacing={1} sx={{marginTop: '2%'}}>{projects}</Stack>
     }
 
-
     return (
         <div style={{marginBottom: "20%"}}>
             <Title title="Projects" className="projects-title"/>
             {renderProjects()}
         </div>
-
     )
 }
 

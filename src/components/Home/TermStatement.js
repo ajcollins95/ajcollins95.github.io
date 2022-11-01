@@ -16,7 +16,7 @@ const TermStatement = (props) => {
                 //copy to clipboard and make a snackbar
                 props.handleEmailClick()
                 break;
-            case 'ajcollins.pdf':
+            case 'ajcollins.pdd':
                 //render pdf somehow
                 alert("PDF")
                 break;

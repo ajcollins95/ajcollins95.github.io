@@ -25,11 +25,22 @@ import { useTheme, createTheme } from '@mui/material/styles';
 const HomeScreen = (props) => {  
     //This is the main layout for the portfolio
     let theme = useTheme()
+    let snackMsg = ""
+    const [value, setValue] = useState(0);
+    const [isSnackOpen, setIsSnackOpen] = useState(false);
 
     //Snackbar methods/data
-    const handleEmailClick = () => {
+    const handleEmailClick = async () => {
         //allows clicking the email link to open the snackbar
-        setIsSnackOpen(true)
+        let email = "ajcollin@alumni.cmu.edu"
+        await navigator.clipboard.writeText(email).then(
+            () => {
+                //Success
+                setIsSnackOpen(true)
+            },
+            () => {
+            }
+        )
     }
 
     const handleSnackClose = (event, reason) => {
@@ -61,9 +72,6 @@ const HomeScreen = (props) => {
         <Projects />,
         <Experience />,
     ]
-
-    const [value, setValue] = useState(0);
-    const [isSnackOpen, setIsSnackOpen] = useState(false);
     
     //variable styles for different components
     const sxTest = {
@@ -78,11 +86,12 @@ const HomeScreen = (props) => {
                     margin: "0",
                     padding: "0px",
                 }}
+                maxWidth={'md'}
                 disableGutters = {true}
             >
                 <Snackbar
                     open={isSnackOpen}
-                    autoHideDuration={4000}
+                    autoHideDuration={3000}
                     onClose={handleSnackClose}
                     message="'ajcollin@alumni.cmu.edu' copied to clipboard!"
                     anchorOrigin={{vertical: 'top', horizontal: "center"}}

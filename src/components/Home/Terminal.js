@@ -19,13 +19,13 @@ const Terminal = (props) => {
             ],
             github: [
                 "gitHub",
-                "Github Link"
+                "https://github.com/ajcollins95"
             ]
         },
         resume: {
             resume: [
                 "ajcollins.pdf",
-                "link to pdf"
+                "https://drive.google.com/file/d/1d6RnwFDoOnSoCZyOFzG-YC07koi35CgQ/view?usp=share_link"
             ]
         },
         interests: [

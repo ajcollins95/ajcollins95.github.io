@@ -78,8 +78,8 @@ Hello! My name is AJ Collins and I'm a developer. I have been building a portfol
 I started off by researching the styles of other contemporary portfolios. I might have looked at about 100 or so. I found some things I loved and others that I hated. I was able to use what I learned to draw out some sketches on paper of how I wanted the portfolio "App" to work. I thought about making a slightly different desktop design, but scrapped it in the interest of time. Then once I had a reference I started implementing!
 
 ### TODO
-Add typing animation to Title.js
-Add windows closing circles to terminal
+Add typing animation to Title.js (not critical)
+Add windows closing circles to terminal (not critical)
 Make Title stay higher on the page (done)
 Make project links active
 Make Home links active 

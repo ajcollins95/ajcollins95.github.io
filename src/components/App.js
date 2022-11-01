@@ -16,7 +16,7 @@ const App = (props) => {
             },
             body1: {
                 fontFamily: '"Ubuntu"',
-                fontSize: 20,
+                fontSize: 18,
                 margin: "1% 0%"
             },
             fontFamily: [

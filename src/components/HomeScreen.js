@@ -82,7 +82,7 @@ const HomeScreen = (props) => {
             >
                 <Snackbar
                     open={isSnackOpen}
-                    autoHideDuration={5000}
+                    autoHideDuration={4000}
                     onClose={handleSnackClose}
                     message="'ajcollin@alumni.cmu.edu' copied to clipboard!"
                     anchorOrigin={{vertical: 'top', horizontal: "center"}}
@@ -92,7 +92,10 @@ const HomeScreen = (props) => {
                     sx = {{
                         height: "100%",
                         margin: "5%",
-                        marginBottom: "10%",
+                        marginTop: "1%",
+                        marginBottom: "5%",
+                        width: "100%"
+
                         
                     }}
                     >

@@ -58,7 +58,7 @@ const Projects = (props) => {
 
 
     return (
-        <div>
+        <div style={{marginBottom: "20%"}}>
             <Title title="Projects" className="projects-title"/>
             {renderProjects()}
         </div>

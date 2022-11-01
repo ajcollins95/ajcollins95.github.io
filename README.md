@@ -80,5 +80,12 @@ I started off by researching the styles of other contemporary portfolios. I migh
 ### TODO
 Add typing animation to Title.js
 Add windows closing circles to terminal
-Make Title staryt higher on the page
-Make links active
+Make Title stay higher on the page (done)
+Make project links active
+Make Home links active 
+Actually copy email to clipboard!!
+Edit resume, host pdf... somewhere (maybe gDrive?)
+Figure out how to host minesweeper
+Deploy website
+Change Site title
+Clean up github

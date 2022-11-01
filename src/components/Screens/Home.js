@@ -9,7 +9,7 @@ const Home = (props) => {
 
     let blurb = {
         one: "I am currently an R&D engineer at ",
-        two: ". I am passionate about building elegant software solutions to solve complex problems!"
+        two: ". I am passionate about building elegant software solutions in the pursuit of solving complex problems!",
     }  
 
     return (

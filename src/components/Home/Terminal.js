@@ -4,15 +4,14 @@ import '../../styles/Terminal.css';
 import TermStatement from './TermStatement';
 import Cursor from '../utils/Cursor';
 
-
-//TODO add top right closing circles
 const Terminal = (props) => {
+    //Renders a terminal with the data from the 'terminalData' object
     const terminalData = {
         currentLocation: "Baltimore, MD",
         contactInfo: {
             email: [
-                "gmail",
-                "ajcollins95@gmail.com"
+                "email",
+                "ajcollin@alumni.cmu.edu"
             ],
             linkedIn: [
                 "linkedIn",

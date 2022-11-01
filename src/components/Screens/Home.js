@@ -1,12 +1,11 @@
 import React from 'react';
 import Typography from '@mui/material/Typography';
-
-
 import '../../styles/Home.css'
 import Title from '../utils/Title';
 import Terminal from '../Home/Terminal';
 
 const Home = (props) => {
+    //Content for the "Home" tab
 
     let blurb = {
         one: "I am currently an R&D engineer at ",

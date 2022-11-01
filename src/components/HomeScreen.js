@@ -4,13 +4,15 @@ import Box from '@mui/material/Box';
 import Snackbar from '@mui/material/Snackbar';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
 import HomeIcon from '@mui/icons-material/Home';
 import CodeIcon from '@mui/icons-material/Code';
 import WorkIcon from '@mui/icons-material/Work';
 import Home from './Screens/Home';
 import Experience from './Screens/Experience';
 import Projects from './Screens/Projects';
-import { useTheme } from '@mui/material/styles';
+import { useTheme, createTheme } from '@mui/material/styles';
 
 /**
  * 
@@ -19,14 +21,19 @@ import { useTheme } from '@mui/material/styles';
  * 
  */
 
-const HomeScreen = (props) => {  
 
-    //Snackbar methods
+const HomeScreen = (props) => {  
+    //This is the main layout for the portfolio
+    let theme = useTheme()
+
+    //Snackbar methods/data
     const handleEmailClick = () => {
+        //allows clicking the email link to open the snackbar
         setIsSnackOpen(true)
     }
 
     const handleSnackClose = (event, reason) => {
+        //closes the snackbar
         if (reason === 'clickaway') {
             return;
         }
@@ -34,6 +41,21 @@ const HomeScreen = (props) => {
         setIsSnackOpen(false)
     }
 
+    const snackAction = (
+        <React.Fragment>
+            <IconButton
+                size='small'
+                aria-label="close"
+                color="inherit"
+                onClick={handleSnackClose}
+            >
+                <CloseIcon fontSize="small" />
+            </IconButton>
+        </React.Fragment>
+    )
+
+
+    //This array helps toggle between various screens
     let bottom_nav_screens = [
         <Home appTheme={props.appTheme} handleEmailClick={handleEmailClick}/>,
         <Projects />,
@@ -43,7 +65,7 @@ const HomeScreen = (props) => {
     const [value, setValue] = useState(0);
     const [isSnackOpen, setIsSnackOpen] = useState(false);
     
-    let theme = useTheme();
+    //variable styles for different components
     const sxTest = {
         color: theme.palette.info.main
     }
@@ -59,11 +81,12 @@ const HomeScreen = (props) => {
                 disableGutters = {true}
             >
                 <Snackbar
-                open={isSnackOpen}
-                autoHideDuration={5000}
-                close={handleSnackClose}
-                message="ajcollin@alumni.cmu.edu copied to clipboard!"
-                
+                    open={isSnackOpen}
+                    autoHideDuration={5000}
+                    onClose={handleSnackClose}
+                    message="'ajcollin@alumni.cmu.edu' copied to clipboard!"
+                    anchorOrigin={{vertical: 'top', horizontal: "center"}}
+                    action={snackAction}
                 />
                 <Box className="screen"
                     sx = {{

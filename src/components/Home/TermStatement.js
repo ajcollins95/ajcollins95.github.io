@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
-import Link from '../utils/Link'
 
 import '../../styles/TermStatement.css';
 
@@ -8,13 +7,13 @@ const TermStatement = (props) => {
     //Turns all terminal data into something that looks terminal-like
 
     const handleLink = (e) => {
+        //handles the action when the user clicks an underlined blue link
         e.preventDefault()
         console.log(e)
         let linkText = e.target.text
         switch (linkText) {
-            case 'gmail':
+            case 'email':
                 //copy to clipboard and make a snackbar
-                alert("EMAIL")
                 props.handleEmailClick()
                 break;
             case 'ajcollins.pdf':
@@ -24,6 +23,8 @@ const TermStatement = (props) => {
             default:
                 //Go to the provided href url
                 alert("GOTO URL")
+                //window.location.assign("http://www.w3schools.com");
+
                 break;
         }
     }
@@ -33,6 +34,7 @@ const TermStatement = (props) => {
         const links = [<span key='start-brace'>[</span>]
         let elements = Object.keys(linkData).length;
         let count = 0
+
         Object.keys(linkData).forEach(key => {            
             const text = linkData[key][0]
             const url = linkData[key][1]
@@ -42,7 +44,6 @@ const TermStatement = (props) => {
                 //This modifies the foramtting to make it look like a coding terminal
                 links.push(<span key={`${text}-${count}`}>, </span>)
             }
-            //links.push(<span>", "</span>)
             count += 1;
         })
         links.push(<span key='end-brace'>]</span>)

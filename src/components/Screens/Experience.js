@@ -1,15 +1,11 @@
-import { color, ThemeProvider } from '@mui/system';
-import React, { useState, useEffect } from 'react';
-import { createTheme, ThemProvider, styled, useTheme } from '@mui/material/styles';
-//import Cell from './Cell';
-//import AppHeader from './AppHeader';
-//import '../styles/Analytics.css';
+import React from 'react';
+import { useTheme } from '@mui/material/styles';
 import Stack from '@mui/material/Stack';
-
 import Title from '../utils/Title'
 import ExperienceCard from '../Experience/ExperienceCard'
 
 const Experience = (props) => {
+    //Renders the experience page
 
     const theme = useTheme()
 

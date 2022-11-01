@@ -19,6 +19,7 @@ import { createTheme, ThemProvider, useTheme } from '@mui/material/styles';
 
 
 
+
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
   return <IconButton {...other} />;
@@ -31,6 +32,7 @@ const ExpandMore = styled((props) => {
 }));
 
 export default function ProjectCard(props) {
+  //Makes a card that displays passed down projectData
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {

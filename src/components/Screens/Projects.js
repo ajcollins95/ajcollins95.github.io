@@ -8,17 +8,8 @@ import Title from '../utils/Title'
 import _ from 'lodash';
 
 const Projects = (props) => {
+    //renders the projectData for the project tab
 
-    const initAppData = () => {
-        let number_of_screens = 4;
-        let app_data = {
-            screen: [...Array(number_of_screens).keys()]
-        };
-        return app_data
-    }
-
-    const [appData, setAppData] = useState(initAppData()) 
-    
     const projectData = [
         {
             title: "Portfolio",
@@ -53,20 +44,7 @@ const Projects = (props) => {
             isCodeDisabled: false,
             isDemoDisabled: false,
         },
-    ]
-    /**
-     * Have like a bunch of cards that say problem on them. 
-     * Give brief problem descriptions of each one
-     * Have a solution button
-     * Card opens up and you can see a brief solution description,
-     * as well as source code and live demo. 
-     * Opening is animated.
-     * Might need to learn router for this.
-     */
-    const theme = useTheme()
-    const projTheme = createTheme(theme, {
-
-    })
+    ]    
 
      const renderProjects = () => {
         //returns a div with all of the logged terminal statements

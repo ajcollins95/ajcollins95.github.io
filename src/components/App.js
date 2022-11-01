@@ -8,8 +8,7 @@ import HomeScreen from './HomeScreen';
 const _ = require('lodash')
 
 const App = (props) => {
-    //create a "theme" for MUI colors
-    //this mostly just makes the navbar black
+    //create a "theme" for MUI Styling
     const theme = createTheme({
         typography: {
             body2: {
@@ -55,32 +54,24 @@ const App = (props) => {
             }
         }
     })
- 
-    const handleScreenChange = (screen) => {
-        //make a state clone
-        let appDataClone = _.cloneDeep(appData)
 
-        appDataClone.currentScreen = screen
-        setAppData(appDataClone)
-    }
-
-    const initAppData = () => {
-        let number_of_screens = 4
-        let app_data = {
-            currentScreen: 'home',
-            handleScreenChange: handleScreenChange,
-
-        }
-        return app_data
-    }
-
-
-    //makes appData a responsive state variable
-    const [appData, setAppData] = useState(initAppData())   
+    const snackTheme = createTheme(theme, {
+       components: {
+           MuiSnackbarContent: {
+               styleOverrides: {
+                   root: {
+                       backgroundColor: theme.palette.secondary.dark, 
+                       color: theme.palette.info.main //off-white
+                   }
+               }
+           }
+       },
+    })
+    
 
     return (
-        <ThemeProvider theme={theme}>
-            <HomeScreen appData={appData} appTheme={theme}/>
+        <ThemeProvider theme={snackTheme}>
+            <HomeScreen appTheme={snackTheme}/>
         </ThemeProvider>
 
     )

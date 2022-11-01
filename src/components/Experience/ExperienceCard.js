@@ -11,6 +11,7 @@ import ExperienceAccordion from './ExperienceAccordion';
 
 
 export default function ExperienceCard(props) {
+  //organizes experience data into a card for display
   const [expanded, setExpanded] = React.useState(false);
   const theme = useTheme()
 
@@ -24,7 +25,8 @@ export default function ExperienceCard(props) {
         }}
         subheader={props.data.company}
         subheaderTypographyProps={{
-          color: theme.palette.secondary.main
+          color: theme.palette.secondary.main,
+          fontSize: "1em"
         }}
       />
       <Divider />

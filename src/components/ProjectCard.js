@@ -72,13 +72,15 @@ export default function ProjectCard(props) {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <Tooltip title="source code" sx={{backgroundColor: theme.palette.secondary.dark}}>
-          <IconButton aria-label="source code">
+        <Tooltip title="source code" sx={{backgroundColor: theme.palette.secondary.dark}} onClick={() => {
+          window.location.assign("http://www.w3schools.com");
+        }}>
+          <IconButton aria-label="source code" disabled={props.data.isCodeDisabled}>
             <CodeIcon sx={{ color: theme.palette.info.main}} />
           </IconButton>
         </Tooltip>
         <Tooltip title="live demo">
-          <IconButton aria-label="view live demo">
+          <IconButton aria-label="view live demo" disabled={props.data.isDemoDisabled}>
             <WebIcon sx={{ color: theme.palette.info.main}}/>
           </IconButton>
         </Tooltip>

@@ -36,7 +36,7 @@ const Experience = (props) => {
                 {
                     role: "Business Development",
                     description: "I have storyboarded, filmed, and edited two marketing videos representing the capabilities of our projects" +
-                    "for consumption within the defense community"
+                    " for consumption within the defense community"
                 },
             ]
 

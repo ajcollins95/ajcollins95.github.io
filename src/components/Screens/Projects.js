@@ -2,8 +2,6 @@ import { color, ThemeProvider } from '@mui/system';
 import React, { useState, useEffect } from 'react';
 import { createTheme, ThemProvider, styled, useTheme } from '@mui/material/styles';
 import Stack from '@mui/material/Stack';
-//import AppHeader from './AppHeader';
-//import '../../styles/Projects.css';
 import ProjectCard from '../ProjectCard';
 import Divider from "@mui/material/Divider"
 import Title from '../Title'
@@ -18,6 +16,7 @@ const Projects = (props) => {
         };
         return app_data
     }
+
     const [appData, setAppData] = useState(initAppData()) 
     
     const projectData = [
@@ -28,7 +27,9 @@ const Projects = (props) => {
             sourceCode: "github link",
             liveDemo: "live link",
             solution: "Build a dev portfolio! I documented the process more " +
-            "in the linked source code readme"
+            "in the linked source code readme",
+            isCodeDisabled: false,
+            isDemoDisabled: false,
         },
         {
             title: "Google foo.bar",
@@ -37,7 +38,9 @@ const Projects = (props) => {
             sourceCode: "github link",
             liveDemo: "live link",
             solution: "This is essentially in the readme where I describe each " +
-            "given problem and my solutions to them."
+            "given problem and my solutions to them.",
+            isCodeDisabled: false,
+            isDemoDisabled: true,
         },
         {
             title: "Minesweeper",
@@ -46,7 +49,9 @@ const Projects = (props) => {
             sourceCode: "github link",
             liveDemo: "live link",
             solution: "I built minesweeper in react! I used a DFS pathfinding algorithm to uncover empty squares." +
-            "I attempted to model my game after Google's minesweeper clone."
+            "I attempted to model my game after Google's minesweeper clone.",
+            isCodeDisabled: false,
+            isDemoDisabled: false,
         },
     ]
     /**

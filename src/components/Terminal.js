@@ -19,7 +19,7 @@ const Terminal = (props) => {
             ],
             linkedIn: [
                 "linkedIn",
-                "LI link"
+                "https://www.linkedin.com/in/ajcollins95"
             ],
             github: [
                 "gitHub",

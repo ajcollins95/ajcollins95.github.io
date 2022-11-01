@@ -16,12 +16,12 @@ const Home = (props) => {
     return (
         <div>
             <Title title="AJ.Collins"/>
-            <p className="blurb">
+            <Typography variant="body1" className="blurb">
                 {blurb.one}
-                <a href="link to bpsc">BPSC
+                <a href="https://www.bowlerpons.com/">BPSC
                 </a>
                 {blurb.two}
-            </p>
+            </Typography>
             <Terminal appTheme={props.appTheme}/>
 
         </div>

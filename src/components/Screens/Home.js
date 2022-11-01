@@ -22,7 +22,7 @@ const Home = (props) => {
                 </a>
                 {blurb.two}
             </Typography>
-            <Terminal appTheme={props.appTheme}/>
+            <Terminal appTheme={props.appTheme} handleEmailClick={props.handleEmailClick}/>
 
         </div>
 

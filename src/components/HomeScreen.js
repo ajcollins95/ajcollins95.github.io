@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
+import Snackbar from '@mui/material/Snackbar';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import HomeIcon from '@mui/icons-material/Home';
@@ -19,14 +20,29 @@ import { useTheme } from '@mui/material/styles';
  */
 
 const HomeScreen = (props) => {  
-    
+
+    //Snackbar methods
+    const handleEmailClick = () => {
+        setIsSnackOpen(true)
+    }
+
+    const handleSnackClose = (event, reason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+
+        setIsSnackOpen(false)
+    }
+
     let bottom_nav_screens = [
-        <Home appTheme={props.appTheme}/>,
+        <Home appTheme={props.appTheme} handleEmailClick={handleEmailClick}/>,
         <Projects />,
         <Experience />,
     ]
 
     const [value, setValue] = useState(0);
+    const [isSnackOpen, setIsSnackOpen] = useState(false);
+    
     let theme = useTheme();
     const sxTest = {
         color: theme.palette.info.main
@@ -42,6 +58,13 @@ const HomeScreen = (props) => {
                 }}
                 disableGutters = {true}
             >
+                <Snackbar
+                open={isSnackOpen}
+                autoHideDuration={5000}
+                close={handleSnackClose}
+                message="ajcollin@alumni.cmu.edu copied to clipboard!"
+                
+                />
                 <Box className="screen"
                     sx = {{
                         height: "100%",

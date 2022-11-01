@@ -56,16 +56,17 @@ const Terminal = (props) => {
                 input={key} 
                 outputContent={terminalData[key]}
                 key={key}
+                handleEmailClick={props.handleEmailClick}
             />)
             
         })
-        terminalLog.push(<Cursor className="terminal-cursor"/>)
+        terminalLog.push(<Cursor className="terminal-cursor" key='cursor'/>)
         return <div>{terminalLog}</div>
     }
 
     return (
         <Container
-        disableGutters="True"
+        disableGutters={true}
         >
             <div className="terminal-container">
                 <div className="terminal-header">

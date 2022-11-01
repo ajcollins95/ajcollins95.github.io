@@ -80,5 +80,5 @@ I started off by researching the styles of other contemporary portfolios. I migh
 ### TODO
 Add typing animation to Title.js
 Add windows closing circles to terminal
+Make Title staryt higher on the page
 Make links active
-Make bottom nav have un selected options be the link color

@@ -1,51 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
-import Link from '../utils/Link'
 
-import '../../styles/TermStatement.css';
 
-const TermStatement = (props) => {
-    //Turns all terminal data into something that looks terminal-like
+const Link = (props) => {
+    //Creates a React style 'a' element
 
-    const handleLink = (e) => {
-        e.preventDefault()
-        console.log(e)
-        let linkText = e.target.text
-        switch (linkText) {
-            case 'gmail':
-                //copy to clipboard and make a snackbar
-                alert("EMAIL")
-                props.handleEmailClick()
-                break;
-            case 'ajcollins.pdf':
-                //render pdf somehow
-                alert("PDF")
-                break;
-            default:
-                //Go to the provided href url
-                alert("GOTO URL")
-                break;
-        }
-    }
-
+'/home/acollins95/Documents/Portfolio/content/stat-tracker/src/components/Link.js'
     const formatLinks = (linkData) => {
         //Renders links as if they were an array
-        const links = [<span key='start-brace'>[</span>]
+        const links = [<span>[</span>]
         let elements = Object.keys(linkData).length;
         let count = 0
         Object.keys(linkData).forEach(key => {            
             const text = linkData[key][0]
             const url = linkData[key][1]
             
-            links.push(<a href={url} onClick={handleLink} key={key}>{text}</a>)
+            links.push(<a href={url}>{text}</a>)
             if (count < elements - 1) {
                 //This modifies the foramtting to make it look like a coding terminal
-                links.push(<span key={`${text}-${count}`}>, </span>)
+                links.push(<span>, </span>)
             }
             //links.push(<span>", "</span>)
             count += 1;
         })
-        links.push(<span key='end-brace'>]</span>)
+        links.push(<span>]</span>)
         return <div className="output-links">{links}</div>
     }
 
@@ -80,13 +58,13 @@ const TermStatement = (props) => {
     }
 
     return (
-        <Box>
+        <span>
             <p className="input">$ AJ.{props.input}</p>
             {formatOutput()}
-        </Box>
+        </span>
         
     )
 
 }
 
-export default TermStatement;
+export default Link;

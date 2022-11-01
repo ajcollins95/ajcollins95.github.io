@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/Title.css'
+import '../../styles/Title.css'
 
 import Cursor from './Cursor'; 
 

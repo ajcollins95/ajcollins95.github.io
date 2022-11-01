@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
 
-import '../styles/TermStatement.css';
+import '../../styles/TermStatement.css';
 
 
 const TermStatement = (props) => {
     //Turns all terminal data into something that looks terminal-like
+
 
     const formatLinks = (linkData) => {
         //Renders links as if they were an array
@@ -18,6 +19,7 @@ const TermStatement = (props) => {
             
             links.push(<a href={url}>{text}</a>)
             if (count < elements - 1) {
+                //This modifies the foramtting to make it look like a coding terminal
                 links.push(<span>, </span>)
             }
             //links.push(<span>", "</span>)

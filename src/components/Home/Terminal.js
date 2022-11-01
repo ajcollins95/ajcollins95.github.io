@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Container from '@mui/material/Container';
-import { createTheme, ThemProvider, styled } from '@mui/material/styles';
-
-
-import '../styles/Terminal.css';
+import '../../styles/Terminal.css';
 import TermStatement from './TermStatement';
-import Cursor from './Cursor';
+import Cursor from '../utils/Cursor';
 
 
 //TODO add top right closing circles

@@ -3,8 +3,8 @@ import Typography from '@mui/material/Typography';
 
 
 import '../../styles/Home.css'
-import Title from '../Title';
-import Terminal from '../Terminal';
+import Title from '../utils/Title';
+import Terminal from '../Home/Terminal';
 
 const Home = (props) => {
 

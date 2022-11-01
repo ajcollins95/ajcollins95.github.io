@@ -1,7 +1,7 @@
 import { color, ThemeProvider } from '@mui/system';
 import React, { useState, useEffect } from 'react';
 import { createTheme, ThemProvider, styled } from '@mui/material/styles';
-import "../styles/Cursor.css"
+import "../../styles/Cursor.css"
 
 //Renders a blinking terminal cursor
 const Cursor = (props) => {

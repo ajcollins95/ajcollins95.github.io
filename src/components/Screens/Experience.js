@@ -6,8 +6,8 @@ import { createTheme, ThemProvider, styled, useTheme } from '@mui/material/style
 //import '../styles/Analytics.css';
 import Stack from '@mui/material/Stack';
 
-import Title from '../Title'
-import ExperienceCard from '../ExperienceCard'
+import Title from '../utils/Title'
+import ExperienceCard from '../Experience/ExperienceCard'
 
 const Experience = (props) => {
 

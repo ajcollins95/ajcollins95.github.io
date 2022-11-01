@@ -2,9 +2,9 @@ import { color, ThemeProvider } from '@mui/system';
 import React, { useState, useEffect } from 'react';
 import { createTheme, ThemProvider, styled, useTheme } from '@mui/material/styles';
 import Stack from '@mui/material/Stack';
-import ProjectCard from '../ProjectCard';
+import ProjectCard from '../Project/ProjectCard';
 import Divider from "@mui/material/Divider"
-import Title from '../Title'
+import Title from '../utils/Title'
 import _ from 'lodash';
 
 const Projects = (props) => {

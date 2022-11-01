@@ -40,6 +40,13 @@ export default function ProjectCard(props) {
   };
 
   const theme = useTheme()
+  const sxActive = {
+    color: theme.palette.info.main
+  }
+  const sxDisabled = {
+    color: "#154133"
+  }
+
 
   const ttColor = '#2E0A21'
 
@@ -83,7 +90,7 @@ export default function ProjectCard(props) {
         </Tooltip>
         <Tooltip title="live demo">
           <IconButton aria-label="view live demo" disabled={props.data.isDemoDisabled}>
-            <WebIcon sx={{ color: theme.palette.info.main}}/>
+            <WebIcon sx={props.data.isDemoDisabled ? sxDisabled : sxActive}/>
           </IconButton>
         </Tooltip>
         <ExpandMore

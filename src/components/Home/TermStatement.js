@@ -22,8 +22,9 @@ const TermStatement = (props) => {
                 break;
             default:
                 //Go to the provided href url
-                alert("GOTO URL")
-                //window.location.assign("http://www.w3schools.com");
+                //console.log(e.target)
+                //alert("GOTO URL")
+                window.location.assign(e.target.href);
 
                 break;
         }

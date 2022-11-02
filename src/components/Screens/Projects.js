@@ -15,7 +15,7 @@ const Projects = (props) => {
             title: "Portfolio",
             problem: "I needed to come up with a way to convince non-technical decision makers" +
             " that I am a competent software professional",
-            sourceCode: "https://github.com/ajcollins95/dev-portfolio",
+            sourceCode: "https://github.com/ajcollins95/ajcollins.github.io",
             liveDemo: "",
             solution: "Build a dev portfolio! I documented the process more " +
             "in the linked source code readme",

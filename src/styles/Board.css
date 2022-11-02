@@ -1,3 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald&display=swap");
+
+.board {
+    cursor: default;
+    background-color: var(--pallet-cool);
+    border-radius: 5px;
+    border: 0px solid var(--pallet-full-border);
+    padding:0px 5%;
+    padding-bottom: 2%;
+    width: fit-content;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+}
+
 :root{
     --pallet-bg-1: #101D42;
     --pallet-hot: #A63D40;
@@ -10,7 +24,6 @@
     --pallet-full-border: var(--pallet-cool);
 
     background-color: var(--pallet-bg1);
-    font-family: 'Oswald', sans-serif;
 }
 
 
@@ -43,17 +56,4 @@
     
 }
 
-.board {
-    cursor: default;
-    background-color: var(--pallet-cool);
-    border-radius: 5px;
-    border: 0px solid var(--pallet-full-border);
-    padding:0px 5%;
-    padding-bottom: 2%;
-    width: fit-content;
-
-    /*
-    margin: auto;
-    */
-}
 

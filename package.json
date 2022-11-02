@@ -19,6 +19,7 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
+  "homepage": "https://ajcollins95.github.io",
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",

@@ -28,7 +28,7 @@ const Terminal = (props) => {
         resume: {
             resume: [
                 "ajcollins.pdf",
-                "https://drive.google.com/file/d/1d6RnwFDoOnSoCZyOFzG-YC07koi35CgQ/view?usp=share_link"
+                "https://drive.google.com/file/d/1WgZDBq9a1-1AnPMCkST2F_plCMjrLC1O/view?usp=share_link"
             ]
         },
         interests: [

@@ -1,5 +1,5 @@
 :root{
-    --pallet-bg: #101D42;
+    --pallet-bg-1: #101D42;
     --pallet-hot: #A63D40;
     --pallet-cool: #677DB7;
     --pallet-neutral: #DCC7BE;
@@ -9,7 +9,7 @@
     --pallet-dynamic-borders: black;
     --pallet-full-border: var(--pallet-cool);
 
-    background-color: var(--pallet-bg);
+    background-color: var(--pallet-bg1);
     font-family: 'Oswald', sans-serif;
 }
 

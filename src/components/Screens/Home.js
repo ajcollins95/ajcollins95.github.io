@@ -1,11 +1,12 @@
 import React from 'react';
 import Typography from '@mui/material/Typography';
-import '../../styles/Home.css'
+import { useTheme } from '@mui/material/styles';
 import Title from '../utils/Title';
 import Terminal from '../Home/Terminal';
 
 const Home = (props) => {
     //Content for the "Home" tab
+    let theme = useTheme()
 
     let blurb = {
         one: "I am currently an R&D engineer at ",
@@ -15,9 +16,14 @@ const Home = (props) => {
     return (
         <div>
             <Title title="AJ.Collins"/>
-            <Typography variant="body1" className="blurb">
+            <Typography 
+                variant="body1" 
+                className="blurb" 
+                sx={{color: theme.palette.text.primary}}>
                 {blurb.one}
-                <a href="https://www.bowlerpons.com/">BPSC
+                <a href="https://www.bowlerpons.com/"
+                    style = {{color: theme.palette.info.main}} >
+                    BPSC
                 </a>
                 {blurb.two}
             </Typography>

@@ -7,7 +7,7 @@ import "../../styles/Cursor.css"
 const Cursor = (props) => {
 
     return (
-        <span className="cursor">&#x25AE;</span> // Switching last digit between E and F changes color
+        <span className="cursor" style={{color: props.color}}>&#x25AE;</span> // Switching last digit between E and F changes color
 
     )
 }

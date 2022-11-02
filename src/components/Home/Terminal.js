@@ -3,6 +3,9 @@ import Container from '@mui/material/Container';
 import '../../styles/Terminal.css';
 import TermStatement from './TermStatement';
 import Cursor from '../utils/Cursor';
+import { useTheme } from '@mui/material/styles';
+
+
 
 const Terminal = (props) => {
     //Renders a terminal with the data from the 'terminalData' object
@@ -46,6 +49,21 @@ const Terminal = (props) => {
         ],
         nextAdventure: "Searching for nextAdventure..." //something to indicate I'm looking
     }
+    let theme = useTheme()
+
+    const terminalStyles = {
+        terminalCursor: {
+            color: theme.palette.secondary.main
+        },
+        logChildren: {
+            borderStyle: "solid",
+            borderColor: theme.palette.secondary.dark,
+            borderWidth: "1px",
+            backgroundColor: theme.palette.secondary.dark,
+
+        }
+
+    }
 
     const logTerminal = () => {
         //returns a div with all of the logged terminal statements
@@ -59,8 +77,13 @@ const Terminal = (props) => {
             />)
             
         })
-        terminalLog.push(<Cursor className="terminal-cursor" key='cursor'/>)
-        return <div>{terminalLog}</div>
+        terminalLog.push(<Cursor style={terminalStyles.terminalCursor} 
+            color={theme.palette.secondary.main}
+            className="terminal-cursor" 
+            key='cursor'
+            />)
+        return <div className="log-children"
+            style={terminalStyles.logChildren}>{terminalLog}</div>
     }
 
     return (
@@ -68,7 +91,7 @@ const Terminal = (props) => {
         disableGutters={true}
         >
             <div className="terminal-container">
-                <div className="terminal-header">
+                <div className="terminal-header" >
                     
                 </div>
                 <div className="terminal-log">

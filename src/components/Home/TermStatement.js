@@ -1,10 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
-
-import '../../styles/TermStatement.css';
+import { useTheme } from '@mui/material/styles';
 
 const TermStatement = (props) => {
     //Turns all terminal data into something that looks terminal-like
+    let theme = useTheme()
+
+    const statementStyles = {
+        link: {
+            color: theme.palette.info.main
+        },
+        outputString: {
+            margin: "0%",
+            color: theme.palette.secondary.main
+        },
+        input: {
+            margin: "0%",
+            marginTop: "3%",
+            color: theme.palette.primary.main
+        },
+        outputLinks: {
+            color: theme.palette.secondary.main
+        }
+
+    }
 
     const handleLink = (e) => {
         //handles the action when the user clicks an underlined blue link
@@ -22,8 +41,6 @@ const TermStatement = (props) => {
                 break;
             default:
                 //Go to the provided href url
-                //console.log(e.target)
-                //alert("GOTO URL")
                 window.location.assign(e.target.href);
 
                 break;
@@ -40,7 +57,12 @@ const TermStatement = (props) => {
             const text = linkData[key][0]
             const url = linkData[key][1]
             
-            links.push(<a href={url} onClick={handleLink} key={key}>{text}</a>)
+            links.push(<a 
+                    href={url} 
+                    onClick={handleLink} 
+                    key={key}
+                    style={statementStyles.link}
+                    >{text}</a>)
             if (count < elements - 1) {
                 //This modifies the foramtting to make it look like a coding terminal
                 links.push(<span key={`${text}-${count}`}>, </span>)
@@ -48,7 +70,8 @@ const TermStatement = (props) => {
             count += 1;
         })
         links.push(<span key='end-brace'>]</span>)
-        return <div className="output-links">{links}</div>
+        return <div className="output-links"
+            style={statementStyles.outputLinks}>{links}</div>
     }
 
 
@@ -59,14 +82,17 @@ const TermStatement = (props) => {
             case 'string':
                 if (props.input == "nextAdventure") { 
                     
-                    return <p className="output-string">{output}</p>
+                    return <p className="output-string" 
+                        style={statementStyles.outputString}>{output}</p>
                 }
-                return <p className="output-string">"{output}"</p>
+                return <p className="output-string"
+                    style={statementStyles.outputString}>"{output}"</p>
                 
                 break;
             case 'object':
                 if (Array.isArray(output)) {
-                    return <p className="output-string">["{output.join("\", \"")}"]</p>
+                    return <p className="output-string"
+                        style={statementStyles.outputString}>["{output.join("\", \"")}"]</p>
                 }
                 else {
                     return formatLinks(output)
@@ -83,7 +109,8 @@ const TermStatement = (props) => {
 
     return (
         <Box>
-            <p className="input">$ AJ.{props.input}</p>
+            <p className="input"
+                style={statementStyles.input}>$ AJ.{props.input}</p>
             {formatOutput()}
         </Box>
         

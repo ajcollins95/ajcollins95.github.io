@@ -19,6 +19,11 @@ const App = (props) => {
                 fontSize: 18,
                 margin: "1% 0%"
             },
+            h3: {
+                fontFamily: '"Source Code Pro"',
+                fontSize: "2em",
+                color: '#FFFD98'
+            },
             fontFamily: [
                 '"Ubuntu"', //Main Font
                 '-apple-system',

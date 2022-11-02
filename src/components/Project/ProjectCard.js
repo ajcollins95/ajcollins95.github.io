@@ -82,7 +82,7 @@ export default function ProjectCard(props) {
       </CardContent>
       <CardActions disableSpacing>
         <Tooltip title="source code" sx={{backgroundColor: theme.palette.secondary.dark}} onClick={() => {
-          window.location.assign("http://www.w3schools.com");
+          window.location.assign(props.data.sourceCode);
         }}>
           <IconButton aria-label="source code" disabled={props.data.isCodeDisabled}>
             <CodeIcon sx={{ color: theme.palette.info.main}} />

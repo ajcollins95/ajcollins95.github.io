@@ -26,7 +26,7 @@ const Projects = (props) => {
             title: "Google foo.bar",
             problem: "Google foo.bar is Google's secret (shh!) hiring app. So... " +
             "prove that I have the technical capacity to work for Google?",
-            sourceCode: "github link",
+            sourceCode: "https://github.com/ajcollins95/google-foobar",
             liveDemo: "live link",
             solution: "This is essentially in the readme where I describe each " +
             "given problem and my solutions to them.",

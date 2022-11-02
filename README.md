@@ -81,11 +81,11 @@ I started off by researching the styles of other contemporary portfolios. I migh
 Add typing animation to Title.js (not critical)
 Add windows closing circles to terminal (not critical)
 Make Title stay higher on the page (done)
-Make project links active
-Make Home links active 
-Actually copy email to clipboard!!
-Edit resume, host pdf... somewhere (maybe gDrive?)
+Make Home links active (done)
+Actually copy email to clipboard!!(done)
+Edit resume, host pdf... somewhere (maybe gDrive?)(done)
+Change Site title (done)
 Figure out how to host minesweeper
 Deploy website
-Change Site title
+Make project links active
 Clean up github

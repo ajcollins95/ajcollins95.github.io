@@ -89,7 +89,9 @@ export default function ProjectCard(props) {
           </IconButton>
         </Tooltip>
         <Tooltip title="live demo">
-          <IconButton aria-label="view live demo" disabled={props.data.isDemoDisabled}>
+          <IconButton aria-label="view live demo" disabled={props.data.isDemoDisabled} onClick={() => {
+            window.location.assign(props.data.liveDemo)
+          }}>
             <WebIcon sx={props.data.isDemoDisabled ? sxDisabled : sxActive}/>
           </IconButton>
         </Tooltip>

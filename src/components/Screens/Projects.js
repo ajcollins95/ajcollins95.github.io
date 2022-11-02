@@ -16,7 +16,7 @@ const Projects = (props) => {
             problem: "I needed to come up with a way to convince non-technical decision makers" +
             " that I am a competent software professional",
             sourceCode: "https://github.com/ajcollins95/dev-portfolio",
-            liveDemo: "live link",
+            liveDemo: "",
             solution: "Build a dev portfolio! I documented the process more " +
             "in the linked source code readme",
             isCodeDisabled: false,
@@ -27,7 +27,7 @@ const Projects = (props) => {
             problem: "Google foo.bar is Google's secret (shh!) hiring app. So... " +
             "prove that I have the technical capacity to work for Google?",
             sourceCode: "https://github.com/ajcollins95/google-foobar",
-            liveDemo: "live link",
+            liveDemo: "",
             solution: "This is essentially in the readme where I describe each " +
             "given problem and my solutions to them.",
             isCodeDisabled: false,
@@ -38,7 +38,7 @@ const Projects = (props) => {
             problem: "Find a way to demonstrate my audacity and capacity in building" +
             "an attractive and reactive web app.",
             sourceCode: "https://github.com/ajcollins95/custom-minesweeper",
-            liveDemo: "live link",
+            liveDemo: "minesweeper",
             solution: "I built minesweeper in react! I used a DFS pathfinding algorithm to uncover empty squares." +
             "I attempted to model my game after Google's minesweeper clone.",
             isCodeDisabled: false,

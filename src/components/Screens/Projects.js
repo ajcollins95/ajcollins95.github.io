@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import { createTheme, ThemProvider, styled, useTheme } from '@mui/material/styles';
 import Stack from '@mui/material/Stack';
 import ProjectCard from '../Project/ProjectCard';
-import Divider from "@mui/material/Divider"
 import Title from '../utils/Title'
 import _ from 'lodash';
 
@@ -13,8 +12,8 @@ const Projects = (props) => {
     const projectData = [
         {
             title: "Portfolio",
-            problem: "I needed to come up with a way to convince non-technical decision makers" +
-            " that I am a competent software professional",
+            problem: "Demonstrate my ability to create a custom React app, as well as" +
+            " show off some of the projects I've been working on.",
             sourceCode: "https://github.com/ajcollins95/ajcollins.github.io",
             liveDemo: "",
             solution: "Build a dev portfolio! I documented the process more " +
@@ -28,19 +27,19 @@ const Projects = (props) => {
             "prove that I have the technical capacity to work for Google?",
             sourceCode: "https://github.com/ajcollins95/google-foobar",
             liveDemo: "",
-            solution: "This is essentially in the readme where I describe each " +
-            "given problem and my solutions to them.",
+            solution: "Document each probelm statement, as well as the process by which I " +
+            "developed my solution. Each of these are accessible in the source code link.",
             isCodeDisabled: false,
             isDemoDisabled: true,
         },
         {
             title: "Minesweeper",
-            problem: "Find a way to demonstrate my audacity and capacity in building" +
+            problem: "I can't seem to locate the mines..." +
             "an attractive and reactive web app.",
             sourceCode: "https://github.com/ajcollins95/custom-minesweeper",
             liveDemo: "minesweeper",
-            solution: "I built minesweeper in react! I used a DFS pathfinding algorithm to uncover empty squares." +
-            "I attempted to model my game after Google's minesweeper clone.",
+            solution: "I developed a state-of-the-art mine-finding simulation using React. The " +
+            "simulation can be accessed through the live demo link.",
             isCodeDisabled: false,
             isDemoDisabled: false,
         },

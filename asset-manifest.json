@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0a7be0ad.css",
+    "main.js": "/static/js/main.8a41df2f.js",
+    "static/media/SourceCodePro-VariableFont_wght.ttf": "/static/media/SourceCodePro-VariableFont_wght.9ef76af760ad69c7256d.ttf",
+    "index.html": "/index.html",
+    "main.0a7be0ad.css.map": "/static/css/main.0a7be0ad.css.map",
+    "main.8a41df2f.js.map": "/static/js/main.8a41df2f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0a7be0ad.css",
+    "static/js/main.8a41df2f.js"
+  ]
+}

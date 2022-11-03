@@ -14,7 +14,7 @@ const Projects = (props) => {
             title: "Portfolio",
             problem: "Demonstrate my ability to create a custom React app, as well as" +
             " show off some of the projects I've been working on.",
-            sourceCode: "https://github.com/ajcollins95/ajcollins.github.io",
+            sourceCode: "https://github.com/ajcollins95/ajcollins95.github.io",
             liveDemo: "",
             solution: "Build a dev portfolio! I documented the process more " +
             "in the linked source code readme",
@@ -37,7 +37,7 @@ const Projects = (props) => {
             problem: "I can't seem to locate the mines..." +
             "an attractive and reactive web app.",
             sourceCode: "https://github.com/ajcollins95/custom-minesweeper",
-            liveDemo: "minesweeper",
+            liveDemo: "custom-minesweeper",
             solution: "I developed a state-of-the-art mine-finding simulation using React. The " +
             "simulation can be accessed through the live demo link.",
             isCodeDisabled: false,
